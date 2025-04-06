@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PH-TUBE</title>
+    <!-- tailwind link -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
 <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 <link rel="stylesheet" href="style.css">
@@ -16,7 +17,7 @@
             </div>
             <div class="search">
                 <label class="input input-bordered flex items-center gap-2">
-                    <input type="text" class="grow" placeholder="Search" />
+                    <input id="search-input" type="text" class="grow" placeholder="Search" />
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 16 16"
@@ -38,10 +39,13 @@
     <nav id="categories" class="py-3 flex gap-5 justify-center">
 
     </nav>
+
     <main>
+      <!-- card section start  -->
         <section id="videos" class="w-11/12 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 py-10">
 
         </section>
+        <!-- card section end -->
         
     </main>
     <!-- open modal -->
@@ -61,6 +65,7 @@
   </div>
 </dialog>
      <!-- close modal -->
+      <!-- lnk to js file -->
     <script src="script/video.js"></script>
 </body>
 </html>

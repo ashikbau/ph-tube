@@ -31,8 +31,8 @@ const loadCatagories =()=>{
    
 }
 // load videos
-const loadVideos =()=>{
-    fetch(" https://openapi.programming-hero.com/api/phero-tube/videos")
+const loadVideos =(searchText = " ")=>{
+    fetch( `https://openapi.programming-hero.com/api/phero-tube/videos?title=${searchText}`)
     //2 - convert promise to json
     .then((res) => res.json())
     //3 - send data to display
@@ -163,7 +163,10 @@ const displayCategories =(categories)=>{
 
 
 
+document.getElementById("search-input").addEventListener("keyup",(e)=>{
+    loadVideos(e.target.value);
 
+})
 
 loadCatagories();
 loadVideos();
